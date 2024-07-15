@@ -143,6 +143,16 @@ a{
     justify-content: space-between;
     align-items: center;
 }
+.client .image a {
+    display:flex;
+    height:90px;
+    align-items: center;
+    padding:0 42px;
+    border-radius:12px;
+}
+.client .image a:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 /* guide */
 .guide{
     margin-top:200px;
