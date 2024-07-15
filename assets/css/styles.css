@@ -44,16 +44,27 @@ a{
     overflow: hidden;
 }
 /* header */
-.header{
+.fix-header{
+    position:sticky;
+    padding-top:26px;
+    background-color:#E6F0FF;
+    top:-26px;
+    z-index: 1;
+}
+.header-hero{
+    display:flex;
     position:relative;
     background:#E6F0FF;
     height:100vh;
 }
 /* navbar */
 .navbar{
+    position:sticky;
+    top:0px;
     display:flex;
     align-items: center;
-    padding-top:38px;
+    /* padding-top:38px; */
+    padding:12px 0px;
 }
 .navbar ul{
     display:flex;
