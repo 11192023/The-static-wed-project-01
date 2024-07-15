@@ -56,6 +56,8 @@ a{
 }
 .header-hero{
     display:flex;
+    flex-direction: column;
+    justify-content: center;
     position:relative;
     background:#E6F0FF;
     height:100vh;
@@ -99,9 +101,6 @@ a{
     margin-left:18px;
 }
 /* hero */
-.hero{
-    margin-top:130px;
-}
 .hero .infor{
     width:51%;
 }
