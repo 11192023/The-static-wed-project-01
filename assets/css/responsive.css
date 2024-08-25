@@ -1,0 +1,198 @@
+/* pc */
+@media screen and (min-width:992px){
+    .header__fixed{
+        display: none;
+    }
+    .show-on-mobile{
+        display: none;
+    }
+}
+/* tablet and mobile */
+@media screen and (max-width:991px){
+    .content{
+        width:100%;
+        padding:0 20px;
+    }
+    .navbar ul{
+        display:none;
+    }
+    .navbar{
+        position: relative;
+    }
+    .navbar .Logo{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+    .navbar__menu{
+        width: 30px;
+        margin-left: 10px;
+        color:#666;
+    }
+    .overlay__header{
+        position: fixed;
+        inset:0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity , visibility;
+        transition-duration: 0.3s;
+    }
+    
+    .header__drawer{
+        position:fixed;
+        inset:0 40% 0 0 ;
+        background-color: #fff;
+        z-index: 2;
+        transform:translate(-100%);
+        transition: transform;
+        transition-duration:0.5s ;
+    }
+    .header__fixed input:checked ~ .overlay__header{
+        opacity: 1;
+        visibility: visible;
+    }
+    .header__fixed input:checked ~ .header__drawer{
+        transform: translate(0%);
+    }
+    .header__fixed input{
+        display: none;
+    }
+    .header__drawer{
+        display: inline-block;
+        padding:30px;
+    }
+    .header__drawer li{
+        margin-top:30px;
+        padding:10px;
+    }
+    .header__drawer li a{
+        font-size:2.0rem;
+        font-weight:500;
+        color:black;
+    }
+    .sign-in{
+        border-top: 1px solid #666;
+    }
+    .hero-img {
+    display: none;
+}
+    .hero .infor{
+        width: 100%;
+        text-align: center;
+    }
+    .hero .infor .des{
+        margin-top: 20px;
+        width:80%;
+        margin:0 auto;
+    }
+    .client .image{
+        flex-wrap:wrap ;
+        justify-content: center;
+    }
+    .client .row {
+        justify-content: space-between;
+    }
+    .client .row-desc{
+        font-size: 1rem;
+    }
+    .stats .row{
+    flex-direction: column;
+    }
+    .stats .image, .stats .infor{
+        width:100%;
+    }
+    .stats .image{
+        order:2;
+    }
+    .stats .infor{
+        order: 1;
+        padding:79px 0;
+    }
+    .stats .infor .sub-title{
+        width:100%;
+    }
+    .stats .infor .desc{
+        width:100%;
+    }
+    .subscript .thumb{
+        display: none;
+    }
+    .subscript .infor{
+        padding-left: 20px;
+        width: 100%;
+    }
+    .subscript .infor .sub-desc{
+        width:100%;
+    }
+    .subscript .body{
+    display: grid;
+    grid-template-columns: 1fr
+    }
+}
+/* tablet */
+@media screen and (min-width:768px) and (max-width:991.98px){
+    .tablet{
+        display:block;
+    }
+    .show-on-mobile{
+        display: none;
+    }
+    .hero .title{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .hero .des{
+        width: 70%;
+    }
+    .list-guides{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+    }
+    .feature .lists{
+        grid-template-columns:repeat(2,1fr);
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+}/* phone */
+@media screen and (max-width:767.92px){
+    .header__drawer{
+        position:fixed;
+        inset:0 25% 0 0 ;
+    }
+    .action{
+        display: none;
+    }
+    .list-guides{
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .feature .lists{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .stats .infor .sub-title{
+        font-size: 1.8rem;
+    }
+    .stats .infor .desc{
+        font-size: 1.4rem;
+    }
+    .subscript .infor{
+        margin-left:30px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    .footer .body .row {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 40px;
+        row-gap: 50px;
+    }
+    .row2{
+        flex-direction:column;
+        gap:30px;
+    }
+}

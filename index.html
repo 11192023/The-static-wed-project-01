@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Project 1</title>
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
@@ -30,22 +31,27 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-<!-- nhanh 2 -->
+    <!-- pc -->
     <header class="fix-header">
         <div class="content">
              <!-- navbar -->
             <nav class="navbar">
                 <!-- logo -->
-                 <a href="#">
+                 <label class="navbar__menu" for="header-drawer">
+                    <svg fill="currentcolor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                 </label>
+                 <a href="#" class="Logo">
                      <img src="./assets/img/Logo.svg" alt="Besnik."/>
                  </a>
                  <!-- navigation -->
-                  <ul>
+                  <ul id="pc-nav">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#feature">Fratures</a></li>
                     <li><a href="#client">Service</a></li>
                     <li><a href="#list">Listed</a></li>
                     <li><a href="#contracts">Contract</a></li>
+                    <li class="show-on-mobile sign-in"><a href="#contracts">Sign In</a></li>
+                    <li class="show-on-mobile"><a href="#contracts">Sign Up</a></li>
                   </ul>
                   <!-- Action -->
                    <div class="action">
@@ -56,7 +62,28 @@
             </nav>
         </div>
     </header>
-    <main id="home"></main>
+    <!-- tablet and phone -->
+    <header class="header__fixed">
+       <div class="content">
+            <!-- input -->
+            <input type="checkbox" id="header-drawer">
+            <!-- overlay -->
+            <label for="header-drawer" class="overlay__header"></label>
+             <!--menu-drawer  -->
+             <div class="header__drawer">
+                <a href="#" class="Logo">
+                         <img src="./assets/img/Logo.svg" alt="Besnik."/>
+                </a>
+               <ul id="mobile-nav"></ul>
+                <script>
+                    const mobileNav=document.getElementById("mobile-nav");
+                    const pcNav=document.getElementById("pc-nav");
+                    mobileNav.innerHTML=pcNav.innerHTML;
+                </script>
+             </div>
+       </div>
+    </header>
+    <main  id="home">
     <div class="header-hero">
         <div class="content">
             <!--hero-->
@@ -294,8 +321,7 @@
             </div>
         </div>
      </div>
-     </main>
-     <div  class="footer">
+     <div   class="footer">
         <div class="content">
             <div class="body">
                 <div class="row">

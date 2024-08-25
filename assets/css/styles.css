@@ -14,13 +14,14 @@ body{
     font-size:1.6rem;
     font-family: 'Poppins',sans-serif;
 }
+/* } */
 /* common */
 .content{
     width: 1110px;
     min-width:calc(100% - 48px);
     margin-left:auto;
     margin-right:auto;
-
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -257,8 +258,8 @@ a{
 }
 .feature .lists{
     margin-top:70px;
-    display:flex;
-    gap:30px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
 
 }
 .feature .lists .item{
